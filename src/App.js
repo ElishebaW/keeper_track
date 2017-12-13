@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import Keeper from './Keeper'
 import './App.css';
 
 class App extends Component {
@@ -9,6 +9,7 @@ class App extends Component {
         <header className="App-header">
           <h1 className="App-title">Brains Motel Keeper Track</h1>
         </header>
+        <Keeper />
       </div>
     );
   }

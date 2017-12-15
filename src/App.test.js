@@ -7,7 +7,7 @@ it('renders the header of the page', () => {
   ReactDOM.render(<App />, div);
 });
 
-it('renders the hotel room visual', () => {
+it('renders the keeper component', () => {
   const div = document.createElement('div');
-  ReactDOM.render(< />, div);
+  ReactDOM.render(<Keeper />, div);
 });

@@ -23,10 +23,20 @@
 }
 
 .button-1, .button-2, .button-3, .button-4 {
-  display: inline;
+  display: inline-block;
   padding: 20px;
+  background-color: green;
+  margin: 20px;
+  font-size: 15px;
+  font-weight: bold;
 }
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
+}
+
+.HotelRoom-101,.HotelRoom-102,.HotelRoom-103,.HotelRoom-104, .HotelRoom-201,.HotelRoom-202,.HotelRoom-203,.HotelRoom-204 {
+  display: inline-block;
+  padding: 50px;
+  background-color: red;
 }

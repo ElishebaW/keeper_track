@@ -7,19 +7,19 @@ import './App.css';
 
 class Keeper extends Component {
 
-cleanStatus(e) {
-  if (e.target.className === "hotelRoomClean") {
+  cleanStatus(e) {
+    if (e.target.className === "hotelRoomClean") {
       e.target.classList.add("hotelRoomDirty");
       e.target.classList.remove("hotelRoomClean");
     } else {
       e.target.classList.add("hotelRoomClean") ;
       e.target.classList.remove("hotelRoomDirty") ;
+    }
   }
-}
 
   render() {
     return (
-      <div className='HotelRoom'>
+    <div className='HotelRoom'>
       <h2>Motel Rooms</h2>
       <button type="button" className="hotelRoomClean"  onClick= {this.cleanStatus}>101</button>
       <button type="button" className="hotelRoomClean"  onClick= {this.cleanStatus}>102</button>
@@ -29,41 +29,40 @@ cleanStatus(e) {
       <button type="button" className="hotelRoomClean"  onClick= {this.cleanStatus}>202</button>
       <button type="button" className="hotelRoomClean"  onClick= {this.cleanStatus}>203</button>
       <button type="button" className="hotelRoomClean"  onClick= {this.cleanStatus}>204</button>
-
       <div className="Keepers">
         <p className='Keeper-header'>HouseKeeper 1</p>
-      <input
+        <input
         className="room-control"
         placeholder="Room #"/>
-      <p>Supplies Needed </p>
+        <p>Supplies Needed </p>
         <Supplies />
         <KeeperTimer/>
-      <p className='Keeper-header'>HouseKeeper 2 </p>
-      <input
+        <p className='Keeper-header'>HouseKeeper 2 </p>
+        <input
         className="room-control"
         placeholder="Room #"
         onChange={event => this.setState({room: event.target.value})}/>
-      <p>Supplies Needed</p>
-      <Supplies />
-      <KeeperTimer/>
-      <p className='Keeper-header'>HouseKeeper 3</p>
-       <input
-         className="room-control"
-         placeholder="Room #"
-         onChange={event => this.setState({room: event.target.value})}/>
+        <p>Supplies Needed</p>
+        <Supplies />
+        <KeeperTimer/>
+        <p className='Keeper-header'>HouseKeeper 3</p>
+        <input
+        className="room-control"
+        placeholder="Room #"
+        onChange={event => this.setState({room: event.target.value})}/>
         <p>Supplies Needed </p>
         <Supplies />
         <KeeperTimer/>
         <p className='Keeper-header'>HouseKeeper 4 </p>
-      <input
+        <input
         className="room-control"
         placeholder="Room #"
         onChange={event => this.setState({room: event.target.value})}/>
         <p>Supplies Needed </p>
         <Supplies />
         <KeeperTimer/>
+      </div>
     </div>
-  </div>
     )
   }
 }

@@ -1,3 +1,5 @@
+/*App*/
+
 .App {
   text-align: center;
 }
@@ -25,6 +27,7 @@
 .Keeper-header{
   font-weight: bold;
 }
+
 .button-1, .button-2, .button-3, .button-4 {
   display: inline-block;
   padding: 20px;
@@ -38,11 +41,7 @@
   to { transform: rotate(360deg); }
 }
 
-.HotelRoom-101,.HotelRoom-102,.HotelRoom-103,.HotelRoom-104, .HotelRoom-201,.HotelRoom-202,.HotelRoom-203,.HotelRoom-204 {
-  display: inline-block;
-  padding: 50px;
-  background-color:  #33FF77;
-}
+/*Keeper Component*/
 
 .hotelRoomClean{
   background-color: #33FF77;
@@ -54,4 +53,14 @@
   background-color:  #FF0000;
   display: inline-block;
   padding: 50px;
+}
+
+/*Supplies Component*/
+.largeButton {
+  font-size: 20px;
+  background-color:  #FF0000;
+}
+
+.smallButton {
+  font-size: inherit;
 }

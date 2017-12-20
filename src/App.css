@@ -22,10 +22,13 @@
   font-size: large;
 }
 
+.Keeper-header{
+  font-weight: bold;
+}
 .button-1, .button-2, .button-3, .button-4 {
   display: inline-block;
   padding: 20px;
-  background-color: green;
+  background-color: #33FF77 ;
   margin: 20px;
   font-size: 15px;
   font-weight: bold;
@@ -38,5 +41,17 @@
 .HotelRoom-101,.HotelRoom-102,.HotelRoom-103,.HotelRoom-104, .HotelRoom-201,.HotelRoom-202,.HotelRoom-203,.HotelRoom-204 {
   display: inline-block;
   padding: 50px;
-  background-color: red;
+  background-color:  #33FF77;
+}
+
+.hotelRoomClean{
+  background-color: #33FF77;
+  display: inline-block;
+  padding: 50px;
+}
+
+.hotelRoomDirty {
+  background-color:  #FF0000;
+  display: inline-block;
+  padding: 50px;
 }

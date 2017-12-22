@@ -4,6 +4,8 @@
   "private": true,
   "dependencies": {
     "react": "^16.2.0",
+    "react-alert": "^2.4.0",
+    "react-bootstrap-alert": "^1.0.7",
     "react-dom": "^16.2.0",
     "react-scripts": "1.0.17"
   },

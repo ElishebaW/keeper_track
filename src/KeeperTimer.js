@@ -26,14 +26,15 @@ class KeeperTimer extends React.Component {
     , 1000);
   }
 
-  keeperTimePerformance(){
-    var keeperPerformance = prompt('What was the endtime for the cleaning?')
-    if(keeperPerformance<20) {
-      alert('This keeper is on fire!');
+  keeperTimePerformance(e){
+    var keeperPerformance = prompt("What was the end time in minutes for the cleaning?")
+    if (keeperPerformance < 20) {
+       e.target.success('This keeper is on fire!')
     } else {
-      alert('This keeper needs more training');
+       e.target.error('This keeper needs some training.')
     }
   }
+
   handleStopClick() {
     clearInterval(this.incrementer);
     this.setState({

@@ -14,16 +14,7 @@ class Alert extends Component{
     };
   }
 
-  // 
-  // keeperTimePerformance(e){
-  //   var keeperPerformance = prompt("What was the end time in minutes for the cleaning?")
-  //   if (keeperPerformance < 20) {
-  //      e.goodPerformanceAlert;
-  //   } else {
-  //      e.badPerformanceAlert;
-  //   }
-  // }
-
+  
   goodPerformanceAlert(){
     this.msg.show('This keeper is on fire!', {
       time: 2000,

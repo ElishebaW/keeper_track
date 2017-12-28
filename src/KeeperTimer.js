@@ -26,15 +26,6 @@ class KeeperTimer extends React.Component {
     , 1000);
   }
 
-  keeperTimePerformance(e){
-    var keeperPerformance = prompt("What was the end time in minutes for the cleaning?")
-    if (keeperPerformance < 20) {
-       e.target.success('This keeper is on fire!')
-    } else {
-       e.target.error('This keeper needs some training.')
-    }
-  }
-
   handleStopClick() {
     clearInterval(this.incrementer);
     this.setState({
@@ -72,7 +63,6 @@ class KeeperTimer extends React.Component {
           ? <Button onClick={this.handleResetClick.bind(this)}>reset</Button>
           : null
         )}
-       <Button onClick={this.keeperTimePerformance}>Performance at glance</Button>
         <ul className="stopwatch-laps">
           { this.state.laps.map((lap, i) =>
               <li className="stopwatch-lap"><strong>{i + 1}</strong>/ {formattedSeconds(lap)}</li>)

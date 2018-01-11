@@ -18,7 +18,9 @@ class Keeper extends Component {
   }
 
   render() {
+    let suppliesText = "Supplies Needed"
     return (
+
     <div className='HotelRoom'>
       <h2>Motel Rooms</h2>
         <button type="button" className="hotelRoomClean"  onClick= {this.cleanStatus}>101</button>
@@ -34,7 +36,7 @@ class Keeper extends Component {
         <input
         className="room-control"
         placeholder="Room #"/>
-        <p>Supplies Needed </p>
+        <p>{suppliesText}</p>
         <Supplies />
         <KeeperTimer/>
         <p className='Keeper-header'>HouseKeeper 2 </p>
@@ -42,7 +44,7 @@ class Keeper extends Component {
         className="room-control"
         placeholder="Room #"
         onChange={event => this.setState({room: event.target.value})}/>
-        <p>Supplies Needed</p>
+        <p>{suppliesText}</p>
         <Supplies />
         <KeeperTimer/>
         <p className='Keeper-header'>HouseKeeper 3</p>
@@ -50,7 +52,7 @@ class Keeper extends Component {
         className="room-control"
         placeholder="Room #"
         onChange={event => this.setState({room: event.target.value})}/>
-        <p>Supplies Needed </p>
+        <p>{suppliesText}</p>
         <Supplies />
         <KeeperTimer/>
         <p className='Keeper-header'>HouseKeeper 4 </p>
@@ -58,7 +60,7 @@ class Keeper extends Component {
         className="room-control"
         placeholder="Room #"
         onChange={event => this.setState({room: event.target.value})}/>
-        <p>Supplies Needed </p>
+        <p>{suppliesText}</p>
         <Supplies />
         <KeeperTimer/>
       </div>

@@ -3,8 +3,6 @@ import KeeperTimer from './KeeperTimer';
 import Supplies from './Supplies';
 import './App.css';
 
-
-
 class Keeper extends Component {
 
   cleanStatus(e) {
@@ -18,53 +16,32 @@ class Keeper extends Component {
   }
 
   render() {
-    let suppliesText = "Supplies Needed"
     return (
-
-    <div className='HotelRoom'>
-      <h2>Motel Rooms</h2>
-        <button type="button" className="hotelRoomClean"  onClick= {this.cleanStatus}>101</button>
-        <button type="button" className="hotelRoomClean"  onClick= {this.cleanStatus}>102</button>
-        <button type="button" className="hotelRoomClean"  onClick= {this.cleanStatus}>103</button>
-        <button type="button" className="hotelRoomClean"  onClick= {this.cleanStatus}>104</button>
-        <button type="button" className="hotelRoomClean"  onClick= {this.cleanStatus}>201</button>
-        <button type="button" className="hotelRoomClean"  onClick= {this.cleanStatus}>202</button>
-        <button type="button" className="hotelRoomClean"  onClick= {this.cleanStatus}>203</button>
-        <button type="button" className="hotelRoomClean"  onClick= {this.cleanStatus}>204</button>
-      <div className="Keepers">
-        <p className='Keeper-header'>HouseKeeper 1</p>
-        <input
-        className="room-control"
-        placeholder="Room #"/>
-        <p>{suppliesText}</p>
-        <Supplies />
-        <KeeperTimer/>
-        <p className='Keeper-header'>HouseKeeper 2 </p>
-        <input
-        className="room-control"
-        placeholder="Room #"
-        onChange={event => this.setState({room: event.target.value})}/>
-        <p>{suppliesText}</p>
-        <Supplies />
-        <KeeperTimer/>
-        <p className='Keeper-header'>HouseKeeper 3</p>
-        <input
-        className="room-control"
-        placeholder="Room #"
-        onChange={event => this.setState({room: event.target.value})}/>
-        <p>{suppliesText}</p>
-        <Supplies />
-        <KeeperTimer/>
-        <p className='Keeper-header'>HouseKeeper 4 </p>
-        <input
-        className="room-control"
-        placeholder="Room #"
-        onChange={event => this.setState({room: event.target.value})}/>
-        <p>{suppliesText}</p>
-        <Supplies />
-        <KeeperTimer/>
+      <div className='HotelRoom'>
+        <h2>Motel Rooms</h2>
+          <button type="button" className="hotelRoomClean"  onClick= {this.cleanStatus}>101</button>
+          <button type="button" className="hotelRoomClean"  onClick= {this.cleanStatus}>102</button>
+          <button type="button" className="hotelRoomClean"  onClick= {this.cleanStatus}>103</button>
+          <button type="button" className="hotelRoomClean"  onClick= {this.cleanStatus}>104</button>
+          <button type="button" className="hotelRoomClean"  onClick= {this.cleanStatus}>201</button>
+          <button type="button" className="hotelRoomClean"  onClick= {this.cleanStatus}>202</button>
+          <button type="button" className="hotelRoomClean"  onClick= {this.cleanStatus}>203</button>
+          <button type="button" className="hotelRoomClean"  onClick= {this.cleanStatus}>204</button>
+        <div className="Keepers">
+          <p className='Keeper-header'>HouseKeeper 1</p>
+          <Supplies />
+          <KeeperTimer/>
+          <p className='Keeper-header'>HouseKeeper 2</p>
+          <Supplies />
+          <KeeperTimer/>
+          <p className='Keeper-header'>HouseKeeper 3</p>
+          <Supplies />
+          <KeeperTimer/>
+          <p className='Keeper-header'>HouseKeeper 4</p>
+          <Supplies />
+          <KeeperTimer/>
       </div>
-    </div>
+      </div>
     )
   }
 }

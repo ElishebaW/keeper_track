@@ -3,21 +3,23 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "enzyme": "^3.2.0",
+    "enzyme-adapter-react-16": "^1.1.0",
+    "jest": "^19.0.2",
     "react": "^16.2.0",
     "react-alert": "^2.4.0",
     "react-bootstrap-alert": "^1.0.7",
     "react-dom": "^16.2.0",
-    "react-scripts": "1.0.17",
-    "react-transition-group": "^1.2.1"
+    "react-transition-group": "^1.2.1",
+    "sinon": "^4.1.4"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
+    "test": "jest",
     "eject": "react-scripts eject"
   },
   "devDependencies": {
-    "enzyme": "^3.2.0",
-    "enzyme-adapter-react-16": "^1.1.0"
+    "react-scripts": "1.0.17"
   }
 }

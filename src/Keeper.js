@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import KeeperTimer from './KeeperTimer';
 import Supplies from './Supplies';
-import './App.css';
 
 class Keeper extends Component {
 
@@ -29,18 +28,18 @@ class Keeper extends Component {
           <button type="button" className="hotelRoomClean"  onClick= {this.cleanStatus}>204</button>
         <div className="Keepers">
           <p className='Keeper-header'>HouseKeeper 1</p>
-          <Supplies />
-          <KeeperTimer/>
+            <Supplies />
+            <KeeperTimer/>
           <p className='Keeper-header'>HouseKeeper 2</p>
-          <Supplies />
-          <KeeperTimer/>
+            <Supplies />
+            <KeeperTimer/>
           <p className='Keeper-header'>HouseKeeper 3</p>
-          <Supplies />
-          <KeeperTimer/>
+            <Supplies />
+            <KeeperTimer/>
           <p className='Keeper-header'>HouseKeeper 4</p>
-          <Supplies />
-          <KeeperTimer/>
-      </div>
+            <Supplies />
+           <KeeperTimer/>
+        </div>
       </div>
     )
   }

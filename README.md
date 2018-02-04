@@ -19,12 +19,12 @@ There is a timer component to use after the housekeeper is assigned a room to me
 2. I had a hard time finding the best way to toggle the room colors, but settled on css class changes using JavaScript because of it's ease of use.
 
 3. This is the first React app I was able to set up. It was much easier to use Create React App to generate the application.
-
+dfsd
 
 
 ## Author
 
-* **Elisheba Wiggins** - *Initial work*
+* **Elisheba Wiggins**
 
 
 ## License

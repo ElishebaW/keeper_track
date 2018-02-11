@@ -14,7 +14,7 @@ class Supplies extends Component {
     }
   }
 
-  render (){
+  render () {
     let suppliesText = "Supplies Needed"
       return(
         <div>
@@ -24,7 +24,7 @@ class Supplies extends Component {
           placeholder="Room #"
           onChange={event => this.setState({room: event.target.value})}/>
           <p>{suppliesText}</p>
-         </div>
+          </div>
        <div>
       <ul>
         <button type='button' className = 'smallButton' onClick={this.changeButtonSize}>Vacuum</button>
@@ -37,4 +37,5 @@ class Supplies extends Component {
     )
   }
 }
+
 export default Supplies;

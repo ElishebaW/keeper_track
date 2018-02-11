@@ -5,27 +5,27 @@ import Supplies from './Supplies';
 class Keeper extends Component {
 
   cleanStatus(e) {
-    if (e.target.className === "hotelRoomClean") {
-      e.target.classList.add("hotelRoomDirty");
-      e.target.classList.remove("hotelRoomClean");
+    if (e.target.className === "motelRoomClean") {
+      e.target.classList.add("motelRoomClean");
+      e.target.classList.remove("motelRoomClean");
     } else {
-      e.target.classList.add("hotelRoomClean") ;
-      e.target.classList.remove("hotelRoomDirty") ;
+      e.target.classList.add("motelRoomClean") ;
+      e.target.classList.remove("motelRoomClean") ;
     }
   }
 
   render() {
     return (
-      <div className='HotelRoom'>
-        <h2 className="modelRoom">Motel Rooms</h2>
-          <button type="button" className="hotelRoomClean"  onClick= {this.cleanStatus} id='button'>101</button>
-          <button type="button" className="hotelRoomClean"  onClick= {this.cleanStatus}>102</button>
-          <button type="button" className="hotelRoomClean"  onClick= {this.cleanStatus}>103</button>
-          <button type="button" className="hotelRoomClean"  onClick= {this.cleanStatus}>104</button>
-          <button type="button" className="hotelRoomClean"  onClick= {this.cleanStatus}>201</button>
-          <button type="button" className="hotelRoomClean"  onClick= {this.cleanStatus}>202</button>
-          <button type="button" className="hotelRoomClean"  onClick= {this.cleanStatus}>203</button>
-          <button type="button" className="hotelRoomClean"  onClick= {this.cleanStatus}>204</button>
+      <div className='motelRoom'>
+        <h2 className="motelRoom">Motel Rooms</h2>
+          <button type="button" className="motelRoomClean"  onClick= {this.cleanStatus}>101</button>
+          <button type="button" className="motelRoomClean"  onClick= {this.cleanStatus}>102</button>
+          <button type="button" className="motelRoomClean"  onClick= {this.cleanStatus}>103</button>
+          <button type="button" className="motelRoomClean"  onClick= {this.cleanStatus}>104</button>
+          <button type="button" className="motelRoomClean"  onClick= {this.cleanStatus}>201</button>
+          <button type="button" className="motelRoomClean"  onClick= {this.cleanStatus}>202</button>
+          <button type="button" className="motelRoomClean"  onClick= {this.cleanStatus}>203</button>
+          <button type="button" className="motelRoomClean"  onClick= {this.cleanStatus}>204</button>
         <div className="Keepers">
           <p className='Keeper-header'>HouseKeeper 1</p>
             <Supplies />

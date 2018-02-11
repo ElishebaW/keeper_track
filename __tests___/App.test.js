@@ -7,8 +7,10 @@ import Keeper from '../src/Keeper';
 import KeeperTimer from '../src/KeeperTimer';
 import Supplies from '../src/Supplies';
 import { cleanStatus} from '../src/Keeper'
+import sinon from 'sinon';
+import chai from 'chai';
 
-describe('renders components', () => {
+describe('renders components without crashing', () => {
   let div;
 
   beforeEach(function(){
@@ -28,27 +30,32 @@ describe('renders components', () => {
   });
 });
 
-describe('motelRooms', () => {
+describe('cleanStatus', () => {
 
-  it('has eight motel rooms displayed', () =>{
+  it('renders eight motel rooms', () => {
     const wrapper = mount(<Keeper />);
-    expect(wrapper.find('.hotelRoomClean').length).toBe(8)
+    expect(wrapper.find('.motelRoomClean').length).toBe(8)
   })
 
-
-  it('cleanStatus is updated to hotelRoomDirty from hotelRoomClean', () => {
-  const wrapper = mount(<Keeper />);
-  const dirty = wrapper.find('.hotelRoomClean').at(1).simulate('click');
-  expect(wrapper.find('.hotelRoomDirty').length).toBe(1);
-  });
-
-  it('cleanStatus is updated to hotelRoomClean from hotelRoomDirty', () => {
-    const wrapper = shallow(<Keeper />);
-    wrapper.find('#button').first().prop('onClick')()
-    expect(wrapper.find('.hotelRoomDirty').length).toBe(1)
-  });
+  it('simulates cleanStatus click event', () => {
+    const mockCallBack = jest.fn();
+    const button = shallow((<button type="button" className="motelRoomClean"  onClick= {mockCallBack} id='button'>101</button>));
+    button.find('.motelRoomClean').simulate('click');
+    expect(mockCallBack.mock.calls.length).toEqual(1);
+ });
 });
 
-describe('changeButtonSize function changes the button size on click', () => {
+describe('Supplies', () => {
 
-})
+  it('renders four supply buttons', ()  => {
+    const wrapper = mount(<Supplies />)
+    expect(wrapper.find('.smallButton').length).toBe(4);
+  });
+
+  it('simulates changeButtonSize click event', () => {
+    const mockCallBack = jest.fn();
+    const button = shallow((<button type='button' className ='smallButton' onClick={mockCallBack}>Vacuum</button>));
+    button.find('.smallButton').simulate('click');
+    expect(mockCallBack.mock.calls.length).toEqual(1);
+ });
+});

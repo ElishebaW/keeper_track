@@ -17,8 +17,8 @@ class Keeper extends Component {
   render() {
     return (
       <div className='HotelRoom'>
-        <h2>Motel Rooms</h2>
-          <button type="button" className="hotelRoomClean"  onClick= {this.cleanStatus}>101</button>
+        <h2 className="modelRoom">Motel Rooms</h2>
+          <button type="button" className="hotelRoomClean"  onClick= {this.cleanStatus} id='button'>101</button>
           <button type="button" className="hotelRoomClean"  onClick= {this.cleanStatus}>102</button>
           <button type="button" className="hotelRoomClean"  onClick= {this.cleanStatus}>103</button>
           <button type="button" className="hotelRoomClean"  onClick= {this.cleanStatus}>104</button>

@@ -11,19 +11,24 @@
 
 .App-header {
   background-color: #222;
-  height: 150px;
+  height: 200px;
   padding: 20px;
   color: white;
+  margin-bottom: 30px;
 }
 
 .App-title {
-  font-size: 1.5em;
+  font-size: 8em;
+  position: relative;
 }
 
 .App-intro {
   font-size: large;
 }
 
+.Keepers {
+  margin-top: 40px;
+}
 .Keeper-header{
   font-weight: bold;
 }
@@ -43,6 +48,10 @@
 
 /*Keeper Component*/
 
+.motelRoom {
+    position: relative;
+    top: 20px;
+}
 .hotelRoomClean{
   background-color: #33FF77;
   display: inline-block;

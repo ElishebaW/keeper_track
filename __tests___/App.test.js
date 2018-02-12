@@ -6,11 +6,11 @@ import App from '../src/App';
 import Keeper from '../src/Keeper';
 import KeeperTimer from '../src/KeeperTimer';
 import Supplies from '../src/Supplies';
-import { cleanStatus} from '../src/Keeper'
+import { cleanStatus }  from '../src/Keeper'
 import sinon from 'sinon';
 import chai from 'chai';
 
-describe('renders components without crashing', () => {
+describe('App', () => {
   let div;
 
   beforeEach(function(){
@@ -28,21 +28,25 @@ describe('renders components without crashing', () => {
   it('renders Supplies component', () => {
     ReactDOM.render(<Supplies />, div);
   });
+
+  it('renders App component', () => {
+    ReactDOM.render(<App />, div);
+  });
 });
 
-describe('cleanStatus', () => {
+describe('Keeper', () => {
 
   it('renders eight motel rooms', () => {
     const wrapper = mount(<Keeper />);
     expect(wrapper.find('.motelRoomClean').length).toBe(8)
-  })
+  });
 
   it('simulates cleanStatus click event', () => {
     const mockCallBack = jest.fn();
     const button = shallow((<button type="button" className="motelRoomClean"  onClick= {mockCallBack} id='button'>101</button>));
     button.find('.motelRoomClean').simulate('click');
     expect(mockCallBack.mock.calls.length).toEqual(1);
- });
+  });
 });
 
 describe('Supplies', () => {

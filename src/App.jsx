@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import Keeper from './Keeper'
 
 
-
 class App extends Component {
 
   render() {

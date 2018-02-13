@@ -18,7 +18,9 @@ There is a timer component to use after the housekeeper is assigned a room to me
 
 2. I had a hard time finding the best way to toggle the room colors, but settled on css class changes using JavaScript because of it's ease of use.
 
-3. This is the first React app I was able to set up. It was much easier to use Create React App to generate the application.
+3. Finding the best way to test the functions in the app.
+
+4. Figuring out why npm start didn't start the development server. It was because I didn't have react-scripts installed
 
 
 ## Author

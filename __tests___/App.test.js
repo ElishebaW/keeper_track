@@ -35,6 +35,7 @@ describe('App', () => {
 });
 
 describe('Keeper', () => {
+  const mockCallBack = jest.fn();
 
   it('renders eight motel rooms', () => {
     const wrapper = mount(<Keeper />);
@@ -42,14 +43,14 @@ describe('Keeper', () => {
   });
 
   it('mock clicks motelRoom button', () => {
-    const mockCallBack = jest.fn();
+
     const button = shallow(<button type="button" className="motelRoomClean" onClick= {mockCallBack} id='button'>101</button>);
     button.find('.motelRoomClean').simulate('click');
     expect(mockCallBack.mock.calls.length).toEqual(1);
  });
 });
 
-describe('Supplies', () => {
+describe('click events', () => {
 
   it('renders four supply buttons', ()  => {
     const wrapper = mount(<Supplies />)
@@ -64,7 +65,7 @@ describe('Supplies', () => {
  });
 });
 
-describe('KeeperTimer', () => {
+describe('KeeperTime buttons', () => {
 
   it('mock clicks start button', () => {
     const mockCallBack = jest.fn();

@@ -17,16 +17,18 @@ class Keeper extends Component {
 
   render() {
     return (
-      <div className='motelRoom'>
-        <h2 className="motelRoom">Motel Rooms</h2>
-          <button type="button" className="motelRoomClean"  onClick= {this.cleanStatus}>101</button>
-          <button type="button" className="motelRoomClean"  onClick= {this.cleanStatus}>102</button>
-          <button type="button" className="motelRoomClean"  onClick= {this.cleanStatus}>103</button>
-          <button type="button" className="motelRoomClean"  onClick= {this.cleanStatus}>104</button>
-          <button type="button" className="motelRoomClean"  onClick= {this.cleanStatus}>201</button>
-          <button type="button" className="motelRoomClean"  onClick= {this.cleanStatus}>202</button>
-          <button type="button" className="motelRoomClean"  onClick= {this.cleanStatus}>203</button>
-          <button type="button" className="motelRoomClean"  onClick= {this.cleanStatus}>204</button>
+      <div className='body'>
+        <div className='motelRoom'>
+          <h2 className="motelRoom">Motel Rooms</h2>
+            <button type="button" className="motelRoomClean"  onClick= {this.cleanStatus}>101</button>
+            <button type="button" className="motelRoomClean"  onClick= {this.cleanStatus}>102</button>
+            <button type="button" className="motelRoomClean"  onClick= {this.cleanStatus}>103</button>
+            <button type="button" className="motelRoomClean"  onClick= {this.cleanStatus}>104</button>
+            <button type="button" className="motelRoomClean"  onClick= {this.cleanStatus}>201</button>
+            <button type="button" className="motelRoomClean"  onClick= {this.cleanStatus}>202</button>
+            <button type="button" className="motelRoomClean"  onClick= {this.cleanStatus}>203</button>
+            <button type="button" className="motelRoomClean"  onClick= {this.cleanStatus}>204</button>
+        </div>
         <div className="Keepers">
           <p className='Keeper-header'>HouseKeeper 1</p>
             <Supplies />

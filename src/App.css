@@ -12,6 +12,7 @@
 .App-header {
   background-color: #222;
   height: 200px;
+  width: 100%;
   padding: 20px;
   color: white;
   margin-bottom: 30px;
@@ -22,6 +23,7 @@
   position: relative;
 }
 
+
 .App-intro {
   font-size: large;
 }
@@ -29,6 +31,7 @@
 .Keepers {
   margin-top: 40px;
 }
+
 .Keeper-header{
   font-weight: bold;
 }
@@ -48,7 +51,7 @@
 
 /*Keeper Component*/
 
-.motelRoom {
+.motelRoom, .Keepers {
     margin-top: 20px;
 }
 .motelRoomClean{

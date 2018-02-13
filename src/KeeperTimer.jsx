@@ -60,7 +60,7 @@ class KeeperTimer extends React.Component {
 
         {(this.state.secondsElapsed !== 0 &&
           this.incrementer === this.state.lastClearedIncrementer
-          ? <Button onClick={this.handleResetClick.bind(this)}>reset</Button>
+          ? <Button className="reset" onClick={this.handleResetClick.bind(this)}>reset</Button>
           : null
         )}
         <ul className="stopwatch-laps">

@@ -41,13 +41,12 @@ describe('Keeper', () => {
     expect(wrapper.find('.motelRoomClean').length).toBe(8)
   });
 
-  it('simulates cleanStatus click event', () => {
+  it('mock clicks motelRoom button', () => {
     const mockCallBack = jest.fn();
-    const button = shallow((<button type="button" className="motelRoomClean"  onClick= {mockCallBack} id='button'>101</button>));
+    const button = shallow(<button type="button" className="motelRoomClean" onClick= {mockCallBack} id='button'>101</button>);
     button.find('.motelRoomClean').simulate('click');
     expect(mockCallBack.mock.calls.length).toEqual(1);
  });
-
 });
 
 describe('Supplies', () => {
@@ -57,10 +56,40 @@ describe('Supplies', () => {
     expect(wrapper.find('.smallButton').length).toBe(4);
   });
 
-  it('simulates changeButtonSize click event', () => {
+  it('mock clicks the supplies button', () => {
     const mockCallBack = jest.fn();
-    const button = shallow((<button type='button' className ='smallButton' onClick={mockCallBack}>Vacuum</button>));
+    const button = shallow(<button type='button' className ='smallButton' onClick={mockCallBack}>Vacuum</button>);
     button.find('.smallButton').simulate('click');
     expect(mockCallBack.mock.calls.length).toEqual(1);
  });
+});
+
+describe('KeeperTimer', () => {
+
+  it('mock clicks start button', () => {
+    const mockCallBack = jest.fn();
+    const Button = (props) =>
+      <button type="button" {...props} className={"btn " + props.className } />;
+    const button = shallow(<Button className="start-btn" onClick={mockCallBack}>start</Button>);
+    button.find('.start-btn').simulate('click');
+    expect(mockCallBack.mock.calls.length).toEqual(1);
+  });
+
+  it('mock clicks the stop button', () => {
+    const mockCallBack = jest.fn();
+    const Button = (props) =>
+      <button type="button" {...props} className={"btn " + props.className } />;
+    const button = shallow(<Button className="stop-btn" onClick={mockCallBack}>start</Button>);
+    button.find('.stop-btn').simulate('click');
+    expect(mockCallBack.mock.calls.length).toEqual(1);
+  });
+
+  it('mock clicks the reset button', () => {
+    const mockCallBack = jest.fn();
+    const Button = (props) =>
+      <button type="button" {...props} className={"btn " + props.className } />;
+    const button = shallow(<Button className="reset" onClick={mockCallBack}>reset</Button>);
+    button.find('.reset').simulate('click');
+    expect(mockCallBack.mock.calls.length).toEqual(1);
+  });
 });

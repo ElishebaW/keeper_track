@@ -46,7 +46,8 @@ describe('Keeper', () => {
     const button = shallow((<button type="button" className="motelRoomClean"  onClick= {mockCallBack} id='button'>101</button>));
     button.find('.motelRoomClean').simulate('click');
     expect(mockCallBack.mock.calls.length).toEqual(1);
-  });
+ });
+
 });
 
 describe('Supplies', () => {

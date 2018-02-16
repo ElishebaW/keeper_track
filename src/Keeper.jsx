@@ -7,11 +7,9 @@ class Keeper extends Component {
 
   cleanStatus(e) {
     if (e.target.className === "motelRoomClean") {
-      e.target.classList.add("motelRoomDirty");
-      e.target.classList.remove("motelRoomClean");
+      e.target.className = "motelRoomDirty";
     } else {
-      e.target.classList.add("motelRoomClean") ;
-      e.target.classList.remove("motelRoomDirty") ;
+      e.target.className = "motelRoomClean";
     }
   }
 

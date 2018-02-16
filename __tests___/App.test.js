@@ -35,18 +35,23 @@ describe('App', () => {
 });
 
 describe('Keeper', () => {
-  const mockCallBack = jest.fn();
+  const cleanStatus= jest.fn();
 
   it('renders eight motel rooms', () => {
-    const wrapper = mount(<Keeper />);
+    const wrapper = mount(<Keeper cleanStatus={cleanStatus}/>);
     expect(wrapper.find('.motelRoomClean').length).toBe(8)
   });
 
   it('mock clicks motelRoom button', () => {
+    const button = shallow(<button type="button" className="motelRoomClean" onClick= {cleanStatus} id='button'>101</button>);
+    button.find('.motelRoomClean').simulate('click')
+    expect(cleanStatus.mock.calls.length).toEqual(1);
+  });
 
-    const button = shallow(<button type="button" className="motelRoomClean" onClick= {mockCallBack} id='button'>101</button>);
-    button.find('.motelRoomClean').simulate('click');
-    expect(mockCallBack.mock.calls.length).toEqual(1);
+  it('updates classList', () => {
+    const wrapper = mount(<Keeper />)
+    expect(classStatus()).toBeDefined()
+
  });
 });
 

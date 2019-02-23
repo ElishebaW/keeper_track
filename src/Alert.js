@@ -36,7 +36,6 @@ class Alert extends Component{
     return(
       <div>
         <AlertContainer ref={a => this.msg = a} {...this.alertOptions} />
-
       </div>
     );
   }

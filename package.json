@@ -18,7 +18,8 @@
     "react-dom": "^16.2.0",
     "react-scripts": "^1.1.1",
     "react-test-renderer": "^16.2.0",
-    "sinon": "^4.1.4"
+    "sinon": "^4.1.4",
+    "snyk": "^1.316.1"
   },
   "jest": {
     "setupTestFrameworkScriptFile": "<rootDir>/src/setupTests.js"
@@ -39,7 +40,9 @@
   "scripts": {
     "build": "react-scripts build",
     "start": "react-scripts start",
-    "test": "jest"
+    "test": "jest",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "repository": {
     "type": "git",
@@ -53,5 +56,6 @@
   "bugs": {
     "url": "https://github.com/ElishebaW/keeper_track/issues"
   },
-  "homepage": "https://github.com/ElishebaW/keeper_track#readme"
+  "homepage": "https://github.com/ElishebaW/keeper_track#readme",
+  "snyk": true
 }
